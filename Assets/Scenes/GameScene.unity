@@ -386,7 +386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5243197d3c9d1a4b89434c3379ddf92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  woodHarvesterPrefab: {fileID: 6343503684812971771, guid: 33f5e79de582b1c44bea9aff109b8d16, type: 3}
+  buildingType: {fileID: 11400000, guid: 7029d22459a38e6449a3cab0495f5e78, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
