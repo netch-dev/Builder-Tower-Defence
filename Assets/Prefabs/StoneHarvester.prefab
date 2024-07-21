@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6343503684812971771}
+  - component: {fileID: 2744866588469777779}
+  - component: {fileID: -2388811484199689891}
   m_Layer: 0
   m_Name: StoneHarvester
   m_TagString: Untagged
@@ -32,6 +34,31 @@ Transform:
   - {fileID: 7727304976373113397}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2744866588469777779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6930452448092361699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82cbc832f751c474b8a8664fa614baf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-2388811484199689891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6930452448092361699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f857c461b7b33fc4891367937490b8f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildingType: {fileID: 11400000, guid: 7029d22459a38e6449a3cab0495f5e78, type: 2}
 --- !u!1 &8882305795356531087
 GameObject:
   m_ObjectHideFlags: 0
