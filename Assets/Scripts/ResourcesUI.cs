@@ -18,18 +18,19 @@ public class ResourcesUI : MonoBehaviour {
 
 		resourceTypeTransformDictionary = new Dictionary<ResourceTypeSO, Transform>();
 
-		int count = 0;
+		int index = 0;
 		foreach (ResourceTypeSO resourceType in resourceTypeList.list) {
 			Transform resourceTransform = Instantiate(resourceTemplate, transform);
 			resourceTransform.gameObject.SetActive(true);
 
 			float offsetAmount = 160;
-			resourceTransform.GetComponent<RectTransform>().anchoredPosition = new Vector2(-offsetAmount * count, 0);
-			count++;
+			resourceTransform.GetComponent<RectTransform>().anchoredPosition = new Vector2(-offsetAmount * index, 0);
 
 			resourceTransform.Find("image").GetComponent<Image>().sprite = resourceType.sprite;
 
 			resourceTypeTransformDictionary[resourceType] = resourceTransform;
+
+			index++;
 		}
 	}
 

@@ -19,3 +19,4 @@ MonoBehaviour:
     resourceType: {fileID: 11400000, guid: 9678952c7967ccd4a9060bb9b7d5e52c, type: 2}
   - timerMax: 3
     resourceType: {fileID: 11400000, guid: 5901e0723c682ba4da440c27ab7847d5, type: 2}
+  sprite: {fileID: 21300000, guid: 2263e91ebcd2a254dab5f4caccb4a7af, type: 3}
