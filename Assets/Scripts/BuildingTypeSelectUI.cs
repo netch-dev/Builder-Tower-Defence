@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,7 +11,6 @@ public class BuildingTypeSelectUI : MonoBehaviour {
 	private Dictionary<BuildingTypeSO, Transform> btnTypeTransformDictionary;
 	private BuildingTypeListSO buildingTypeList;
 	private Transform arrowBtn;
-
 
 	private void Awake() {
 		buttonTemplate.gameObject.SetActive(false);
@@ -31,7 +31,6 @@ public class BuildingTypeSelectUI : MonoBehaviour {
 
 		arrowBtn.GetComponent<Button>().onClick.AddListener(() => {
 			BuildingManager.Instance.SetActiveBuildingType(null);
-			UpdateActiveBuildingTypeButton();
 		});
 
 		index++;
@@ -48,7 +47,6 @@ public class BuildingTypeSelectUI : MonoBehaviour {
 
 			btnTransform.GetComponent<Button>().onClick.AddListener(() => {
 				BuildingManager.Instance.SetActiveBuildingType(buildingType);
-				UpdateActiveBuildingTypeButton();
 			});
 
 			index++;
@@ -56,6 +54,12 @@ public class BuildingTypeSelectUI : MonoBehaviour {
 	}
 
 	private void Start() {
+		BuildingManager.Instance.OnSelectedBuildingChanged += BuildingManager_OnSelectedBuildingChanged;
+
+		UpdateActiveBuildingTypeButton();
+	}
+
+	private void BuildingManager_OnSelectedBuildingChanged(object sender, EventArgs e) {
 		UpdateActiveBuildingTypeButton();
 	}
 
