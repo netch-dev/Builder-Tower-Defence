@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class BuildingGhost : MonoBehaviour {
 	[SerializeField] private GameObject spriteGameObject;
+	[SerializeField] private ResourceNearbyOverlay resourceNearbyOverlay;
 
 	private SpriteRenderer spriteRenderer;
 
@@ -22,8 +23,11 @@ public class BuildingGhost : MonoBehaviour {
 	private void BuildingManager_OnSelectedBuildingChanged(object sender, BuildingManager.OnSelectedBuildingChangedEventArgs e) {
 		if (e.selectedBuildingType == null) {
 			Hide();
+			resourceNearbyOverlay.Hide();
 		} else {
 			Show(e.selectedBuildingType.sprite);
+			//TODO: support multiple resources in the building ghost overlay
+			resourceNearbyOverlay.Show(e.selectedBuildingType.resourceGeneratorData[0]);
 		}
 	}
 
