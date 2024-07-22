@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -12,12 +10,10 @@ public partial class BuildingManager : MonoBehaviour {
 		public BuildingTypeSO selectedBuildingType;
 	}
 
-	private BuildingTypeListSO buildingTypeList;
 	private BuildingTypeSO selectedBuildingType;
 
 	private void Awake() {
 		Instance = this;
-		buildingTypeList = Resources.Load<BuildingTypeListSO>(typeof(BuildingTypeListSO).Name);
 	}
 
 	private void Update() {
