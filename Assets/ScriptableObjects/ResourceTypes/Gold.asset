@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d63b9f2f2f9ba8649b86d541cf9ec1e9, type: 3}
   m_Name: Gold
   m_EditorClassIdentifier: 
-  nameString: Gold
+  displayName: Gold
+  shortname: G
   sprite: {fileID: 21300000, guid: 8b744c47cb320b84889a7b8439a78bc2, type: 3}
+  colourHex: FFD700

@@ -4465,7 +4465,7 @@ Camera:
   far clip plane: 5000
   field of view: 60
   orthographic: 1
-  orthographic size: 29.99989
+  orthographic size: 17.99998
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -10195,6 +10195,7 @@ GameObject:
   m_Component:
   - component: {fileID: 999009712}
   - component: {fileID: 999009713}
+  - component: {fileID: 999009714}
   m_Layer: 5
   m_Name: btnTemplate
   m_TagString: Untagged
@@ -10268,6 +10269,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &999009714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 999009711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbf8a2923ae83b74ba009c9f310c16b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1006649912
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16777,7 +16790,7 @@ MonoBehaviour:
   m_Follow: {fileID: 627894342}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 29.99989
+    OrthographicSize: 17.99998
     NearClipPlane: 0.1
     FarClipPlane: 5000
     Dutch: 0
@@ -17710,7 +17723,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -20174,7 +20187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
