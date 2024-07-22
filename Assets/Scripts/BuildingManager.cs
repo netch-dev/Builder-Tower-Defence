@@ -19,7 +19,11 @@ public partial class BuildingManager : MonoBehaviour {
 	private void Update() {
 		if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject()) {
 			if (selectedBuildingType == null) return;
+
 			Vector3 mouseWorldPostion = Utils.GetMouseWorldPosition();
+
+			if (!CanSpawnBuilding(selectedBuildingType, mouseWorldPostion)) return;
+
 			Instantiate(selectedBuildingType.prefab, mouseWorldPostion, Quaternion.identity);
 		}
 
@@ -35,5 +39,34 @@ public partial class BuildingManager : MonoBehaviour {
 
 	public BuildingTypeSO GetActiveBuildingType() {
 		return selectedBuildingType;
+	}
+
+	private bool CanSpawnBuilding(BuildingTypeSO buildingType, Vector3 position) {
+		BoxCollider2D buildingCollider = buildingType.prefab.GetComponent<BoxCollider2D>();
+
+		// Make sure the area is clear
+		Collider2D[] collider2DArray = Physics2D.OverlapBoxAll(position + (Vector3)buildingCollider.offset, buildingCollider.size, 0);
+		bool isAreaClear = collider2DArray.Length == 0;
+		if (!isAreaClear) return false;
+
+		// Make sure no buildings of the same type are nearby
+		collider2DArray = Physics2D.OverlapCircleAll(position, buildingType.minConstructionRadius);
+		foreach (Collider2D collider2D in collider2DArray) {
+			collider2D.TryGetComponent(out BuildingTypeHolder buildingTypeHolder);
+			if (buildingTypeHolder != null) {
+				if (buildingTypeHolder.buildingType == buildingType) return false;
+			}
+		}
+
+		// Make sure this building is not being placed too far from other buildings
+		// The game starts with an HQ, so there will always be a building nearby
+		float maxConstructionRadius = 25f;
+		collider2DArray = Physics2D.OverlapCircleAll(position, maxConstructionRadius);
+		foreach (Collider2D collider2D in collider2DArray) {
+			collider2D.TryGetComponent(out BuildingTypeHolder buildingTypeHolder);
+			if (buildingTypeHolder != null) return true;
+		}
+
+		return false;
 	}
 }

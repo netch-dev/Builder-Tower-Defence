@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 6343503684812971771}
   - component: {fileID: 2566105759590841795}
   - component: {fileID: -7466708207215137642}
-  - component: {fileID: 1986664586907485965}
+  - component: {fileID: 6593933989465345499}
   m_Layer: 0
-  m_Name: GoldHarvester
+  m_Name: HQ
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59,8 +59,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f857c461b7b33fc4891367937490b8f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildingType: {fileID: 11400000, guid: cf5424075b780b6489a7c15a4f17109a, type: 2}
---- !u!61 &1986664586907485965
+  buildingType: {fileID: 11400000, guid: c2ef30ee8cd8d124daa48d3edac67236, type: 2}
+--- !u!61 &6593933989465345499
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -92,7 +92,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.063810825, y: -0.2656545}
+  m_Offset: {x: 0.017041922, y: -0.46847343}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -103,7 +103,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.996846, y: 4.2187796}
+  m_Size: {x: 6.3937593, y: 4.107151}
   m_EdgeRadius: 0
 --- !u!1 &8882305795356531087
 GameObject:
@@ -115,7 +115,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7727304976373113397}
   - component: {fileID: 188816325081988175}
-  - component: {fileID: 2420957676139465397}
+  - component: {fileID: 7178674697449569251}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -179,7 +179,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8ead931dd91bff8489e75de9c414f17f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7030b8e3eb49e8440ae8eb3ec8b45d05, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -190,7 +190,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2420957676139465397
+--- !u!114 &7178674697449569251
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
