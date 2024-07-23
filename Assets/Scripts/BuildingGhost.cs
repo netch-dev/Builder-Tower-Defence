@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BuildingGhost : MonoBehaviour {
@@ -26,8 +27,13 @@ public class BuildingGhost : MonoBehaviour {
 			resourceNearbyOverlay.Hide();
 		} else {
 			Show(e.selectedBuildingType.sprite);
-			//TODO: support multiple resources in the building ghost overlay
-			resourceNearbyOverlay.Show(e.selectedBuildingType.resourceGeneratorData[0]);
+
+			//TODO: support multiple resources in the building ghost
+			if (e.selectedBuildingType.hasResourceGeneratorData && e.selectedBuildingType.resourceGeneratorData.Count > 0) {
+				resourceNearbyOverlay.Show(e.selectedBuildingType.resourceGeneratorData[0]);
+			} else {
+				resourceNearbyOverlay.Hide();
+			}
 		}
 	}
 
