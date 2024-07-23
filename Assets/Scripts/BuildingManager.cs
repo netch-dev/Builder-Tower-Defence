@@ -41,11 +41,6 @@ public partial class BuildingManager : MonoBehaviour {
 		if (Input.GetMouseButtonDown(1)) {
 			SetActiveBuildingType(null);
 		}
-
-		//TODO: Remove this debug code
-		if (Input.GetKeyDown(KeyCode.T)) {
-			Enemy.Create(Utils.GetMouseWorldPosition() + (Utils.GetRandomDirection() * 5f));
-		}
 	}
 
 	public void SetActiveBuildingType(BuildingTypeSO buildingType) {
