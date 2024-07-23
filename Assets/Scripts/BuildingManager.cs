@@ -10,6 +10,8 @@ public partial class BuildingManager : MonoBehaviour {
 		public BuildingTypeSO selectedBuildingType;
 	}
 
+	[SerializeField] private Building hqBuilding;
+
 	private BuildingTypeSO selectedBuildingType;
 
 	private void Awake() {
@@ -38,6 +40,11 @@ public partial class BuildingManager : MonoBehaviour {
 
 		if (Input.GetMouseButtonDown(1)) {
 			SetActiveBuildingType(null);
+		}
+
+		//TODO: Remove this debug code
+		if (Input.GetKeyDown(KeyCode.T)) {
+			Enemy.Create(Utils.GetMouseWorldPosition() + (Utils.GetRandomDirection() * 5f));
 		}
 	}
 
@@ -87,5 +94,9 @@ public partial class BuildingManager : MonoBehaviour {
 
 		errorMessage = "Too far from other buildings!";
 		return false;
+	}
+
+	public Building GetHQBuilding() {
+		return hqBuilding;
 	}
 }

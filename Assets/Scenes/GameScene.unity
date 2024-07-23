@@ -4465,7 +4465,7 @@ Camera:
   far clip plane: 5000
   field of view: 60
   orthographic: 1
-  orthographic size: 25.99631
+  orthographic size: 11.99632
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -9478,6 +9478,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5243197d3c9d1a4b89434c3379ddf92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hqBuilding: {fileID: 1415596380}
 --- !u!1001 &934423965
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13851,6 +13852,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6343503684812971771, guid: 7f81d9950da93e64fb2c75052505a9ac, type: 3}
   m_PrefabInstance: {fileID: 628522683}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1415596380 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8139278678727170358, guid: 7f81d9950da93e64fb2c75052505a9ac, type: 3}
+  m_PrefabInstance: {fileID: 628522683}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47c6c77529c7cdc4a87e0ee0aea81b57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1417741390
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16802,7 +16814,7 @@ MonoBehaviour:
   m_Follow: {fileID: 627894342}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 25.99631
+    OrthographicSize: 11.99632
     NearClipPlane: 0.1
     FarClipPlane: 5000
     Dutch: 0
