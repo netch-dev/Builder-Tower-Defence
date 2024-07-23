@@ -4465,7 +4465,7 @@ Camera:
   far clip plane: 5000
   field of view: 60
   orthographic: 1
-  orthographic size: 17.99998
+  orthographic size: 25.99631
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -5524,6 +5524,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 854724920}
     m_Modifications:
+    - target: {fileID: 3898424953705429094, guid: 7f81d9950da93e64fb2c75052505a9ac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d2fa16b4e8e25ab448ddb02430ef315c, type: 3}
+    - target: {fileID: 4868521726232524168, guid: 7f81d9950da93e64fb2c75052505a9ac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d2fa16b4e8e25ab448ddb02430ef315c, type: 3}
+    - target: {fileID: 5464683650032480641, guid: 7f81d9950da93e64fb2c75052505a9ac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d2fa16b4e8e25ab448ddb02430ef315c, type: 3}
     - target: {fileID: 6343503684812971771, guid: 7f81d9950da93e64fb2c75052505a9ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -16790,7 +16802,7 @@ MonoBehaviour:
   m_Follow: {fileID: 627894342}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 17.99998
+    OrthographicSize: 25.99631
     NearClipPlane: 0.1
     FarClipPlane: 5000
     Dutch: 0
@@ -17756,8 +17768,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 16
+  m_fontSizeBase: 16
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -17766,7 +17778,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 1024
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: -2.25
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
