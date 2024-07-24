@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Rendering.BuiltIn.ShaderGraph;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour {
@@ -21,7 +18,9 @@ public class Enemy : MonoBehaviour {
 
 	private void Start() {
 		rb = GetComponent<Rigidbody2D>();
-		targetTransform = BuildingManager.Instance.GetHQBuilding().transform;
+		if (BuildingManager.Instance.GetHQBuilding() != null) {
+			targetTransform = BuildingManager.Instance.GetHQBuilding().transform;
+		}
 
 		healthSystem = GetComponent<HealthSystem>();
 		healthSystem.OnDie += HealthSystem_OnDie;
@@ -84,7 +83,9 @@ public class Enemy : MonoBehaviour {
 		}
 
 		if (targetTransform == null) { // No valid targets in range
-			targetTransform = BuildingManager.Instance.GetHQBuilding().transform;
+			if (BuildingManager.Instance.GetHQBuilding() != null) {
+				targetTransform = BuildingManager.Instance.GetHQBuilding().transform;
+			}
 		}
 	}
 }

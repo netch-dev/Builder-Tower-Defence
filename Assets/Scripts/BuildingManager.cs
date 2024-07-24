@@ -18,6 +18,14 @@ public partial class BuildingManager : MonoBehaviour {
 		Instance = this;
 	}
 
+	private void Start() {
+		hqBuilding.GetComponent<HealthSystem>().OnDie += HQBuilding_OnDie;
+	}
+
+	private void HQBuilding_OnDie(object sender, EventArgs e) {
+		GameOverUI.Instance.Show();
+	}
+
 	private void Update() {
 		if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject()) {
 			if (selectedBuildingType == null) return;
@@ -43,6 +51,8 @@ public partial class BuildingManager : MonoBehaviour {
 			SetActiveBuildingType(null);
 		}
 	}
+
+
 
 	public void SetActiveBuildingType(BuildingTypeSO buildingType) {
 		selectedBuildingType = buildingType;
