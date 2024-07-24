@@ -33,6 +33,12 @@ public class ResourceManager : MonoBehaviour {
 		OnResourceAmountChanged?.Invoke(this, EventArgs.Empty);
 	}
 
+	public void TakeResource(ResourceTypeSO resourceType, int amount) {
+		resourceAmountDictionary[resourceType] -= amount;
+
+		OnResourceAmountChanged?.Invoke(this, EventArgs.Empty);
+	}
+
 	public int GetResourceAmount(ResourceTypeSO resourceType) {
 		return resourceAmountDictionary[resourceType];
 	}
@@ -47,6 +53,10 @@ public class ResourceManager : MonoBehaviour {
 		}
 
 		return true;
+	}
+
+	public bool CanAfford(ResourceAmount resourceAmount) {
+		return GetResourceAmount(resourceAmount.resourceType) >= resourceAmount.amount;
 	}
 
 	public void SpendResources(ResourceAmount[] resourceAmountArray) {
