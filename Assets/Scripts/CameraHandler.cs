@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class CameraHandler : MonoBehaviour {
 	[SerializeField] private CinemachineVirtualCamera cinemachineVirtualCamera;
+	[SerializeField] private PolygonCollider2D cameraBoundsCollider2D;
+	[SerializeField] private float moveSpeed = 30f;
 
 	private float orthographicSize;
 	private float targetOrthographicSize;
@@ -23,8 +25,11 @@ public class CameraHandler : MonoBehaviour {
 		float y = Input.GetAxisRaw("Vertical");
 
 		Vector3 moveDir = new Vector3(x, y).normalized;
-		float moveSpeed = 30f;
-		transform.position += moveDir * moveSpeed * Time.deltaTime;
+
+		Vector3 movementVector = transform.position + (moveDir * moveSpeed * Time.deltaTime);
+		if (cameraBoundsCollider2D.bounds.Contains(movementVector)) {
+			transform.position = movementVector;
+		}
 	}
 
 	private void HandleZoom() {
