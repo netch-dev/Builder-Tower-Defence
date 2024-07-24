@@ -87,6 +87,24 @@ public partial class BuildingManager : MonoBehaviour {
 			}
 		}
 
+		if (buildingType.hasResourceGeneratorData) {
+			// Make sure there's at least one resource node available
+			bool hasNearbyResource = false;
+
+			foreach (ResourceGeneratorData resourceGeneratorData in buildingType.resourceGeneratorData) {
+				int nearbyResourceAmount = ResourceGenerator.GetNearbyResourceAmount(resourceGeneratorData, position);
+				if (nearbyResourceAmount > 0) {
+					hasNearbyResource = true;
+					break;
+				}
+			}
+
+			if (!hasNearbyResource) {
+				errorMessage = "There are no nearby resource nodes!";
+				return false;
+			}
+		}
+
 		// Make sure this building is not being placed too far from other buildings
 		// The game starts with a HQ, so there will always be a building nearby
 		float maxConstructionRadius = 25f;
