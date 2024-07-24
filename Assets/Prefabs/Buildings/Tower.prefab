@@ -337,7 +337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSpawn: {fileID: 437789928364707627}
-  shootTimerMax: 0.3
+  shootTimerMax: 0.2
 --- !u!1001 &948757894578687888
 PrefabInstance:
   m_ObjectHideFlags: 0

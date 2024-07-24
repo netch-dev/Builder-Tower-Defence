@@ -16,7 +16,7 @@ MonoBehaviour:
   prefab: {fileID: 6343503684812971771, guid: 7f81d9950da93e64fb2c75052505a9ac, type: 3}
   hasResourceGeneratorData: 1
   resourceGeneratorData:
-  - timerMax: 1
+  - timerMax: 0.8
     resourceType: {fileID: 11400000, guid: 14fa58269c08d1543a9c71b5ae1e7ba1, type: 2}
     resourceDetectionRadius: 7
     maxResourceAmount: 7
