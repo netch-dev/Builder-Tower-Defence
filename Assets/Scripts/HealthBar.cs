@@ -60,7 +60,5 @@ public class HealthBar : MonoBehaviour {
 		} else {
 			gameObject.SetActive(true);
 		}
-		//TODO: remove testing code below
-		gameObject.SetActive(true);
 	}
 }
