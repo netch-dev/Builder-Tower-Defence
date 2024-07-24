@@ -1,11 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ArrowProjectile : MonoBehaviour {
 	public static ArrowProjectile Create(Vector3 position, Enemy targetEnemy) {
-		Transform arrowProjectilePrefab = Resources.Load<Transform>("ArrowProjectile");
-		Transform arrowTransform = Instantiate(arrowProjectilePrefab, position, Quaternion.identity);
+		Transform arrowTransform = Instantiate(GameAssets.Instance.arrowProjectilePrefab, position, Quaternion.identity);
 
 		ArrowProjectile arrowProjectile = arrowTransform.GetComponent<ArrowProjectile>();
 		arrowProjectile.SetTarget(targetEnemy);

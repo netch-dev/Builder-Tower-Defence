@@ -41,7 +41,7 @@ public class Building : MonoBehaviour {
 
 	private void HealthSystem_OnDie(object sender, EventArgs e) {
 		SoundManager.Instance.PlaySound(SoundManager.Sound.BuildingDestroyed);
-		Instantiate(Resources.Load<Transform>("pfBuildingDestroyedParticles"), transform.position, Quaternion.identity);
+		Instantiate(GameAssets.Instance.buildingDestroyedParticlesPrefab, transform.position, Quaternion.identity);
 		CinemachineShake.Instance.ShakeCamera(10f, 0.2f);
 		ChromaticAbberationEffect.Instance.SetWeight(1f);
 		Destroy(gameObject);
