@@ -18,7 +18,7 @@ public class GameOverUI : MonoBehaviour {
 		});
 
 		mainMenuButton.onClick.AddListener(() => {
-			GameSceneManager.Load(GameSceneManager.Scene.MenuScene);
+			GameSceneManager.Load(GameSceneManager.Scene.MainMenuScene);
 		});
 
 		Hide();

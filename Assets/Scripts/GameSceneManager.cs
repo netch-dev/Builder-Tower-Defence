@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 public static class GameSceneManager {
 	public enum Scene {
 		GameScene,
-		MenuScene
+		MainMenuScene
 	}
 
 	public static void Load(Scene scene) {
