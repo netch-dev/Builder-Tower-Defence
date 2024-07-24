@@ -34,15 +34,16 @@ public class Enemy : MonoBehaviour {
 	}
 	private void HealthSystem_OnDie(object sender, System.EventArgs e) {
 		SoundManager.Instance.PlaySound(SoundManager.Sound.EnemyDie);
+		Instantiate(Resources.Load<Transform>("pfEnemyDieParticles"), transform.position, Quaternion.identity);
 		Destroy(gameObject);
 	}
 
 	private void OnCollisionEnter2D(Collision2D collision) {
 		Building building = collision.gameObject.GetComponent<Building>();
 		if (building != null) {
-			HealthSystem healthSystem = building.GetComponent<HealthSystem>();
-			healthSystem.Damage(10);
-			Destroy(gameObject);
+			HealthSystem buildingHealthSystem = building.GetComponent<HealthSystem>();
+			buildingHealthSystem.Damage(10);
+			this.healthSystem.Damage(9999);
 		}
 	}
 
