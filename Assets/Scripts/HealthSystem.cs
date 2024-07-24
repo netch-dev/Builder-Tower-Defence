@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 
 public class HealthSystem : MonoBehaviour {
+	public event EventHandler OnHealthAmountMaxChanged;
 	public event EventHandler OnDamaged;
 	public event EventHandler OnHealed;
 	public event EventHandler OnDie;
@@ -11,11 +12,6 @@ public class HealthSystem : MonoBehaviour {
 
 	private void Awake() {
 		currentHealthAmount = healthAmountMax;
-	}
-
-	public void SetHealthAmountMax(int healthAmountMax, bool updateCurrentHealthAmount = false) {
-		this.healthAmountMax = healthAmountMax;
-		if (updateCurrentHealthAmount) currentHealthAmount = healthAmountMax;
 	}
 
 	public void Damage(int damageAmount) {
@@ -56,5 +52,13 @@ public class HealthSystem : MonoBehaviour {
 
 	public float GetHealthAmountNormalized() {
 		return (float)currentHealthAmount / healthAmountMax;
+	}
+
+	public void SetHealthAmountMax(int healthAmountMax, bool updateCurrentHealthAmount = false) {
+		this.healthAmountMax = healthAmountMax;
+
+		if (updateCurrentHealthAmount) currentHealthAmount = healthAmountMax;
+
+		OnHealthAmountMaxChanged?.Invoke(this, EventArgs.Empty);
 	}
 }
