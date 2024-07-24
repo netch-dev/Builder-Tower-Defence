@@ -23,6 +23,7 @@ public partial class BuildingManager : MonoBehaviour {
 	}
 
 	private void HQBuilding_OnDie(object sender, EventArgs e) {
+		SoundManager.Instance.PlaySound(SoundManager.Sound.GameOver);
 		GameOverUI.Instance.Show();
 	}
 
@@ -43,8 +44,8 @@ public partial class BuildingManager : MonoBehaviour {
 
 			ResourceManager.Instance.SpendResources(selectedBuildingType.constructionResourceCostArray);
 
-			//Instantiate(selectedBuildingType.prefab, mouseWorldPosition, Quaternion.identity);
 			BuildingConstruction.Create(mouseWorldPosition, selectedBuildingType);
+			SoundManager.Instance.PlaySound(SoundManager.Sound.BuildingPlaced);
 		}
 
 		if (Input.GetMouseButtonDown(1)) {
