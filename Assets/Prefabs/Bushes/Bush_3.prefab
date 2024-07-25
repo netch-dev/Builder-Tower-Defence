@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4777423379247837748}
   - component: {fileID: 5848676560312183241}
+  - component: {fileID: 2457358884894711695}
   m_Layer: 0
   m_Name: Bush_3
   m_TagString: Untagged
@@ -84,3 +85,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &2457358884894711695
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5620275594556990672}
+  m_Enabled: 1
+  m_SortingLayerID: 1536430359
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0

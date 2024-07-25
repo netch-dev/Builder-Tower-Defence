@@ -10,6 +10,7 @@ public class CameraHandler : MonoBehaviour {
 	[SerializeField] private PolygonCollider2D cameraBoundsCollider2D;
 	[SerializeField] private float moveSpeed = 30f;
 
+	private Camera mainCamera;
 	private float orthographicSize;
 	private float targetOrthographicSize;
 	private bool edgeScrolling;
@@ -21,6 +22,7 @@ public class CameraHandler : MonoBehaviour {
 	}
 
 	private void Start() {
+		mainCamera = Camera.main;
 		orthographicSize = cinemachineVirtualCamera.m_Lens.OrthographicSize;
 		targetOrthographicSize = orthographicSize;
 	}
@@ -50,10 +52,17 @@ public class CameraHandler : MonoBehaviour {
 
 		Vector3 moveDir = new Vector3(x, y).normalized;
 
-		Vector3 movementVector = transform.position + (moveDir * moveSpeed * Time.deltaTime);
-		if (cameraBoundsCollider2D.bounds.Contains(movementVector)) {
-			transform.position = movementVector;
-		}
+		Vector3 movementVector = transform.position + (moveDir * moveSpeed * Time.deltaTime * (Input.GetKey(KeyCode.LeftShift) ? 2 : 1));
+
+		movementVector.x = Mathf.Clamp(movementVector.x,
+			cameraBoundsCollider2D.bounds.min.x + (cinemachineVirtualCamera.m_Lens.OrthographicSize * mainCamera.aspect),
+			cameraBoundsCollider2D.bounds.max.x - (cinemachineVirtualCamera.m_Lens.OrthographicSize * mainCamera.aspect));
+
+		movementVector.y = Mathf.Clamp(movementVector.y,
+			cameraBoundsCollider2D.bounds.min.y + cinemachineVirtualCamera.m_Lens.OrthographicSize,
+			cameraBoundsCollider2D.bounds.max.y - cinemachineVirtualCamera.m_Lens.OrthographicSize);
+
+		transform.position = movementVector;
 	}
 
 	private void HandleZoom() {

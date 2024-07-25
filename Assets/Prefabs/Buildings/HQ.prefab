@@ -566,34 +566,32 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6306654881180353406, guid: c02dba420892767418590cdcad8e7341, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 609909751227243688, guid: c02dba420892767418590cdcad8e7341, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1226807470730083018}
+      addedObject: {fileID: 7616609090254696171}
   m_SourcePrefab: {fileID: 100100000, guid: c02dba420892767418590cdcad8e7341, type: 3}
+--- !u!1 &2789619363662866844 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 609909751227243688, guid: c02dba420892767418590cdcad8e7341, type: 3}
+  m_PrefabInstance: {fileID: 3368813089852978484}
+  m_PrefabAsset: {fileID: 0}
+--- !u!210 &7616609090254696171
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2789619363662866844}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!4 &2789619363662866845 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 609909751227243689, guid: c02dba420892767418590cdcad8e7341, type: 3}
   m_PrefabInstance: {fileID: 3368813089852978484}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &8738620017310070346 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6306654881180353406, guid: c02dba420892767418590cdcad8e7341, type: 3}
-  m_PrefabInstance: {fileID: 3368813089852978484}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1226807470730083018
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8738620017310070346}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 489d2bda5b4b1624fb0c02824b38608c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  runOnlyOnce: 1
-  positionOffsetY: -3
 --- !u!1001 &7035438970049667792
 PrefabInstance:
   m_ObjectHideFlags: 0
