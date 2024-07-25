@@ -23,7 +23,7 @@ public class FindMissingScripts : EditorWindow {
 				Component[] components = prefab.GetComponentsInChildren<Component>(true);
 				foreach (Component component in components) {
 					if (component == null) {
-						Debug.Log($"<color=red>Missing script</color> in prefab '<color=blue>{prefab.name}</color>' at path: {prefabPath.Replace(Application.dataPath, "Assets")}", prefab);
+						Debug.Log($"<color=red>Missing script</color> in prefab '<b><color=blue>{prefab.name}</color></b>' at path: {prefabPath.Replace(Application.dataPath, "Assets")}", prefab);
 						prefabCount++;
 						break;
 					}
@@ -31,6 +31,6 @@ public class FindMissingScripts : EditorWindow {
 			}
 		}
 
-		Debug.Log($"Finished checking prefabs. Found {prefabCount} prefabs with missing scripts.");
+		Debug.Log($"Finished checking prefabs. Found <b>{prefabCount}</b> prefabs with missing scripts.");
 	}
 }
